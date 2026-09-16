@@ -19,13 +19,15 @@
 
 ## Implementado (Julio 2026)
 - Propuesta HTML award-level con animaciones GSAP, scroll suave Lenis, reveals por scroll, parallax, marquee.
-- Modo impresión/PDF verificado: PDF real generado por Chromium, 11 páginas A4, sin páginas en blanco, las 14 filas de precios, 4 paquetes, 3 modelos y la nota "Todo es negociable" presentes.
+- Modo impresión/PDF verificado: PDF real generado por Chromium, 10 páginas A4, sin páginas en blanco, las 14 filas de precios, 4 paquetes, 3 modelos y la nota "Todo es negociable" presentes.
 - Verificación visual por screenshots de todas las secciones en desktop.
+- Iteración 2: botón "Hablemos por WhatsApp" (wa.me/573167696510 con mensaje prellenado) y enlace a www.jakemate.click en el cierre; línea de contacto visible en la versión PDF; enlace al sitio también en el footer; bloque de fuentes (Clutch/IBIZDigital) eliminado; meta tags Open Graph/Twitter con imagen de vista previa `/app/frontend/public/og-image.jpg` (1200×630, capturada del hero) para compartir el enlace por WhatsApp/correo. Nota: og:image apunta a la URL absoluta del preview; al publicar en dominio propio hay que actualizarla.
 
 ## Credenciales
 - No aplica: documento público sin autenticación ni backend.
+- Contacto configurado: WhatsApp +57 316 769 6510 · www.jakemate.click
 
 ## Backlog / próximos pasos posibles
 - P0: ninguno bloqueante.
-- P1: versión en inglés para clientes US; datos de contacto/CTA real (WhatsApp, agendar reunión) si el usuario los comparte.
-- P2: variante "versión cliente final" sin columna Partner (solo retail); favicon/OG image para compartir el link con vista previa atractiva.
+- P1: versión en inglés para clientes US; actualizar og:url/og:image al dominio definitivo al publicar.
+- P2: variante "versión cliente final" sin columna Partner (solo retail); botón "agendar reunión" (Calendly u otro) si el usuario lo comparte.
