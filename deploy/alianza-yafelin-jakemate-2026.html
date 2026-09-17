@@ -377,17 +377,31 @@ a{color:inherit}
 @media print{
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   body{background:#fff!important;color:#111!important;font-size:12px}
-  .grain,.progress,.topbar,.print-fab,.scroll-hint,.hero-watermark,.marquee-band,.orbit{display:none!important}
+  .grain,.progress,.topbar,.print-fab,.scroll-hint,.marquee-band{display:none!important}
   [data-reveal],[data-reveal-group]>*,.hero-title .line,.cta h2 .line{opacity:1!important;transform:none!important}
   .hero-sub em{color:#111!important}
-  .hero{min-height:auto;padding:0 0 30px;color:#111}
-  .hero-title{font-size:32pt;color:#111;margin-bottom:12px}
-  .hero-title .line.outline{color:#111;-webkit-text-stroke:0}
-  .hero-sub{color:#333}
-  .hero-tag{border-color:#999;color:#111}
-  .hero-side{position:relative;transform:none;right:auto;top:auto;margin:20px 0;width:130px}
-  .logo-frame::before,.logo-frame::after{display:none}
-  .logo-caption{position:static;transform:none;color:#555;margin-top:6px}
+  /* PORTADA: panel oscuro fiel al hero web */
+  .hero{
+    min-height:auto;position:relative;overflow:hidden;break-inside:avoid;
+    background:var(--ink)!important;color:var(--paper)!important;
+    padding:50px 268px 50px 44px;border-radius:14px;margin:0 0 12px;
+  }
+  .hero .kicker{color:var(--grey);margin-bottom:18px}
+  .hero-title{font-size:29pt;color:var(--paper);line-height:1;margin:0}
+  .hero-title .line.outline{color:transparent;-webkit-text-stroke:1.3px var(--paper)}
+  .hero-title .rdot{color:var(--red);-webkit-text-stroke:0}
+  .hero-sub{color:rgba(242,238,229,.75);max-width:330px}
+  .hero-sub em{color:var(--paper)!important;font-style:italic}
+  .hero-tag{border-color:rgba(242,238,229,.32);color:var(--paper)}
+  .hero-tag b{color:var(--red)}
+  .hero-side{position:absolute;right:62px;top:50%;transform:translateY(-50%);width:172px;height:172px;margin:0;display:grid;place-items:center;z-index:3}
+  .hero .orbit{display:block!important;position:absolute;inset:-8%;width:116%;height:116%;transform:rotate(34deg)}
+  .hero .orbit text{fill:rgba(242,238,229,.5)}
+  .logo-frame{width:74%}
+  .logo-frame::before,.logo-frame::after{display:block}
+  .logo-frame img{filter:none}
+  .logo-caption{position:absolute;bottom:-13%;left:50%;transform:translateX(-50%);color:var(--grey);margin:0;font-size:8px;letter-spacing:.2em}
+  .hero .hero-watermark{display:block!important;top:50%;font-size:150pt;color:transparent;-webkit-text-stroke:1px rgba(242,238,229,.05)}
   .chapter{padding:20px 0;color:#111!important;background:#fff!important}
   .chapter .ghost{display:none}
   .chapter-title{color:#111;font-size:21pt}
