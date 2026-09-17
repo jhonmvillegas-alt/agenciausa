@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alianza Estratégica 2026 — Yafelin Espino Agencia × Jake Mate</title>
+<meta name="description" content="Propuesta de alianza estratégica: Yafelin Espino Agencia × Jake Mate. Web, SEO, automatización e Inteligencia Artificial. Tarifas Partner 2026.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Alianza Estratégica 2026 — Yafelin Espino Agencia × Jake Mate">
+<meta property="og:description" content="Tu agencia. Nuestra tecnología. Web, SEO, automatización e Inteligencia Artificial: una alianza para vender, implementar y escalar soluciones digitales.">
+<meta property="og:url" content="https://alianza-yafelin-jakemate.netlify.app/">
+<meta property="og:image" content="https://alianza-yafelin-jakemate.netlify.app/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Alianza Estratégica 2026 — Yafelin × Jake Mate">
+<meta name="twitter:description" content="Tu agencia. Nuestra tecnología. Web, SEO, automatización e Inteligencia Artificial.">
+<meta name="twitter:image" content="https://alianza-yafelin-jakemate.netlify.app/og-image.jpg">
+<link rel="icon" type="image/png" href="jakemate-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0C0B09;
+  --ink-2:#161411;
+  --paper:#F2EEE5;
+  --paper-2:#E8E2D4;
+  --red:#E63229;
+  --red-deep:#B71F18;
+  --grey:#8A857B;
+  --line-dark:rgba(242,238,229,.14);
+  --line-light:rgba(12,11,9,.16);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:auto}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{
+  background:var(--ink);
+  color:var(--paper);
+  font-family:'Archivo',sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+::selection{background:var(--red);color:var(--paper)}
+a{color:inherit}
+
+/* ---------- grain ---------- */
+.grain{
+  position:fixed;inset:-50%;z-index:120;pointer-events:none;opacity:.055;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:grain 9s steps(6) infinite;
+}
+@keyframes grain{
+  0%,100%{transform:translate(0,0)}20%{transform:translate(-4%,3%)}40%{transform:translate(3%,-5%)}
+  60%{transform:translate(-5%,-2%)}80%{transform:translate(4%,4%)}
+}
+
+/* ---------- fixed chrome ---------- */
+.progress{position:fixed;top:0;left:0;right:0;height:3px;background:var(--red);transform-origin:0 50%;transform:scaleX(0);z-index:200}
+.topbar{
+  position:fixed;top:0;left:0;right:0;z-index:150;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:20px 4vw;mix-blend-mode:difference;color:#fff;
+  font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;
+}
+.topbar .brand{display:flex;align-items:center;gap:12px}
+.topbar .dotmark{width:10px;height:10px;background:var(--red);border-radius:50%;mix-blend-mode:normal}
+.topbar .right{opacity:.75}
+
+.print-fab{
+  position:fixed;bottom:28px;right:28px;z-index:180;
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--red);color:var(--paper);border:none;cursor:pointer;
+  font-family:'Archivo',sans-serif;font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;
+  padding:16px 26px;border-radius:999px;
+  box-shadow:0 12px 40px rgba(230,50,41,.35);
+  transition:transform .35s cubic-bezier(.2,.9,.3,1.4),background .3s;
+}
+.print-fab:hover{transform:translateY(-4px) scale(1.04);background:var(--red-deep)}
+.print-fab svg{width:17px;height:17px;fill:currentColor}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;
+  padding:16vh 4vw 10vh;overflow:hidden;
+}
+.hero-watermark{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  font-family:'Anton',sans-serif;font-size:26vw;line-height:1;letter-spacing:.02em;
+  color:transparent;-webkit-text-stroke:1px rgba(242,238,229,.06);
+  white-space:nowrap;pointer-events:none;user-select:none;
+}
+.kicker{
+  display:inline-flex;align-items:center;gap:14px;
+  font-size:12px;letter-spacing:.3em;text-transform:uppercase;font-weight:600;color:var(--grey);
+  margin-bottom:4vh;
+}
+.kicker::before{content:"";width:44px;height:1px;background:var(--red)}
+.hero-title{
+  font-family:'Anton',sans-serif;text-transform:uppercase;
+  font-size:clamp(3.4rem,11.5vw,10.8rem);line-height:.96;letter-spacing:.005em;
+  position:relative;z-index:2;
+}
+.hero-title .mask{display:block;overflow:hidden;padding-bottom:.04em}
+.hero-title .line{display:block;will-change:transform}
+.hero-title .line.outline{color:transparent;-webkit-text-stroke:2px var(--paper)}
+.hero-title .rdot{color:var(--red);-webkit-text-stroke:0;font-style:normal}
+.hero-sub{
+  max-width:560px;margin-top:5vh;font-size:clamp(1rem,1.4vw,1.2rem);color:rgba(242,238,229,.72);
+  position:relative;z-index:2;
+}
+.hero-sub em{font-family:'Fraunces',serif;font-style:italic;color:var(--paper)}
+.hero-tag{
+  display:inline-block;margin-top:4vh;padding:12px 22px;border:1px solid var(--line-dark);border-radius:999px;
+  font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--paper);
+  position:relative;z-index:2;width:max-content;
+}
+.hero-tag b{color:var(--red);font-weight:700}
+.hero-side{
+  position:absolute;right:6vw;top:50%;transform:translateY(-50%);z-index:3;
+  width:min(30vw,380px);aspect-ratio:1;display:grid;place-items:center;
+}
+.orbit{position:absolute;inset:-9%;width:118%;height:118%;animation:spin 46s linear infinite}
+.orbit text{fill:rgba(242,238,229,.55);font-family:'Archivo',sans-serif;font-size:10.5px;letter-spacing:.42em;text-transform:uppercase;font-weight:600}
+@keyframes spin{to{transform:rotate(360deg)}}
+.logo-frame{
+  position:relative;width:72%;aspect-ratio:1;display:grid;place-items:center;
+  will-change:transform;transform-style:preserve-3d;
+}
+.logo-frame::before{
+  content:"";position:absolute;inset:-22%;border-radius:50%;
+  background:radial-gradient(circle,rgba(230,50,41,.28),transparent 62%);
+}
+.logo-frame::after{
+  content:"";position:absolute;inset:6%;border-radius:50%;border:1px dashed rgba(242,238,229,.25);
+}
+.logo-frame img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 30px 60px rgba(0,0,0,.6));position:relative;z-index:2}
+.logo-caption{
+  position:absolute;bottom:-8%;left:50%;transform:translateX(-50%);
+  font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:var(--grey);white-space:nowrap;font-weight:600;
+}
+.scroll-hint{
+  position:absolute;bottom:4vh;left:4vw;display:flex;align-items:center;gap:14px;
+  font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--grey);font-weight:600;z-index:2;
+}
+.scroll-hint .bar{width:1px;height:52px;background:var(--line-dark);position:relative;overflow:hidden}
+.scroll-hint .bar::after{content:"";position:absolute;left:0;top:-50%;width:100%;height:50%;background:var(--red);animation:drip 1.8s cubic-bezier(.6,0,.4,1) infinite}
+@keyframes drip{to{top:110%}}
+
+/* ---------- marquee ---------- */
+.marquee-band{background:var(--red);color:var(--ink);position:relative;z-index:5}
+.checker{height:10px;background:repeating-conic-gradient(var(--ink) 0% 25%,var(--paper) 0% 50%) 0 0/20px 20px}
+.marquee{overflow:hidden;padding:22px 0}
+.marquee-track{display:flex;width:max-content;animation:mq 36s linear infinite;will-change:transform}
+.marquee-track span{
+  font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(1.4rem,2.6vw,2.2rem);
+  letter-spacing:.04em;white-space:nowrap;padding-right:.6em;
+}
+.marquee-track .sep{color:var(--paper);padding-right:.6em}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ---------- chapters ---------- */
+.chapter{position:relative;padding:14vh 4vw;overflow:hidden}
+.chapter.on-paper{background:var(--paper);color:var(--ink)}
+.chapter.on-ink{background:var(--ink);color:var(--paper)}
+.chapter .ghost{
+  position:absolute;top:4vh;right:-2vw;font-family:'Anton',sans-serif;
+  font-size:clamp(10rem,26vw,24rem);line-height:1;pointer-events:none;user-select:none;
+}
+.on-paper .ghost{color:transparent;-webkit-text-stroke:1px rgba(12,11,9,.08)}
+.on-ink .ghost{color:transparent;-webkit-text-stroke:1px rgba(242,238,229,.07)}
+.chapter-head{display:flex;align-items:baseline;gap:26px;margin-bottom:7vh;position:relative;z-index:2;flex-wrap:wrap}
+.chapter-num{
+  font-family:'Anton',sans-serif;font-size:clamp(1.2rem,2vw,1.6rem);color:var(--red);
+  letter-spacing:.1em;
+}
+.chapter-title{
+  font-family:'Anton',sans-serif;text-transform:uppercase;
+  font-size:clamp(2.2rem,5.4vw,4.6rem);line-height:1;letter-spacing:.01em;
+}
+.chapter-kicker{font-size:11px;letter-spacing:.3em;text-transform:uppercase;font-weight:700;color:var(--red);margin-bottom:14px}
+.lead{
+  font-size:clamp(1.15rem,2vw,1.7rem);line-height:1.45;max-width:880px;font-weight:500;
+  position:relative;z-index:2;
+}
+.lead strong{color:var(--red)}
+.on-paper .lead{color:#2a2822}
+.on-ink .lead{color:rgba(242,238,229,.85)}
+.lead .serif{font-family:'Fraunces',serif;font-style:italic;font-weight:400}
+
+.wrap{max-width:1280px;margin:0 auto;position:relative;z-index:2}
+
+/* cards */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:8vh;background:var(--line-light)}
+.on-ink .grid2{background:var(--line-dark)}
+.card{padding:52px 44px;position:relative;transition:background .4s}
+.on-paper .card{background:var(--paper)}
+.on-ink .card{background:var(--ink)}
+.card:hover{background:var(--paper-2)}
+.on-ink .card:hover{background:var(--ink-2)}
+.card .idx{font-size:11px;letter-spacing:.3em;color:var(--red);font-weight:700;text-transform:uppercase}
+.card h3{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(1.4rem,2.4vw,2rem);margin:16px 0 18px;letter-spacing:.02em}
+.card p{color:inherit;opacity:.78;font-size:15px;max-width:46ch}
+.highlight{
+  margin-top:8vh;padding:40px 44px;border-left:4px solid var(--red);
+  font-size:clamp(1.05rem,1.6vw,1.3rem);line-height:1.55;max-width:960px;position:relative;z-index:2;
+}
+.on-paper .highlight{background:rgba(12,11,9,.045)}
+.on-ink .highlight{background:rgba(242,238,229,.05)}
+.highlight strong{color:var(--red)}
+.highlight em{font-family:'Fraunces',serif}
+
+/* pillars */
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:8vh;background:var(--line-dark)}
+.pillar{background:var(--ink);padding:56px 40px 64px;position:relative;overflow:hidden;transition:background .4s}
+.pillar:hover{background:var(--ink-2)}
+.pillar .pnum{
+  font-family:'Anton',sans-serif;font-size:clamp(3.4rem,6vw,5.4rem);color:transparent;
+  -webkit-text-stroke:1.5px var(--red);line-height:1;display:block;margin-bottom:26px;
+  transition:color .4s;
+}
+.pillar:hover .pnum{color:var(--red)}
+.pillar h3{font-family:'Anton',sans-serif;font-size:clamp(1.6rem,2.6vw,2.3rem);letter-spacing:.06em;margin-bottom:18px}
+.pillar p{opacity:.7;font-size:15px}
+.pillar::after{content:"";position:absolute;left:40px;bottom:34px;width:44px;height:3px;background:var(--red);transform:scaleX(.4);transform-origin:left;transition:transform .5s cubic-bezier(.2,.9,.2,1)}
+.pillar:hover::after{transform:scaleX(1)}
+
+/* ---------- pricing ---------- */
+.pricing-note{
+  margin-top:6vh;padding:28px 32px;border:1px solid var(--line-light);max-width:920px;
+  font-size:14.5px;line-height:1.65;color:#3c392f;position:relative;z-index:2;background:rgba(12,11,9,.03);
+}
+.pricing-note strong{color:var(--red)}
+.rate-table{width:100%;border-collapse:collapse;margin-top:5vh;position:relative;z-index:2}
+.rate-table thead th{
+  text-align:left;font-size:11px;letter-spacing:.28em;text-transform:uppercase;font-weight:700;
+  color:var(--red);padding:0 20px 18px;border-bottom:2px solid var(--ink);
+}
+.rate-table thead th:nth-child(2),.rate-table tbody td:nth-child(2){width:170px}
+.rate-table thead th:nth-child(3),.rate-table tbody td:nth-child(3){width:210px}
+.rate-table tbody td{padding:24px 20px;border-bottom:1px solid var(--line-light);vertical-align:top;transition:background .3s}
+.rate-table tbody tr{transition:background .3s}
+.rate-table tbody tr:hover{background:rgba(230,50,41,.06)}
+.rate-table td strong{font-family:'Anton',sans-serif;font-weight:400;font-size:1.15rem;letter-spacing:.03em;text-transform:uppercase;display:block}
+.td-desc{display:block;font-size:13px;color:#6b665b;margin-top:8px;max-width:52ch;line-height:1.5}
+.price{font-family:'Anton',sans-serif;font-size:clamp(1.05rem,1.6vw,1.35rem);letter-spacing:.02em;white-space:nowrap}
+.price.retail{color:var(--red)}
+.price small{display:block;font-family:'Archivo',sans-serif;font-size:10px;letter-spacing:.24em;color:#9a9488;text-transform:uppercase;margin-bottom:6px;font-weight:700}
+.sources{margin-top:5vh;font-size:12.5px;line-height:1.8;color:#7d7768;max-width:820px;position:relative;z-index:2}
+.sources a{color:var(--red);text-decoration:none;border-bottom:1px solid rgba(230,50,41,.4)}
+.sources a:hover{border-bottom-color:var(--red)}
+
+/* ---------- packages ---------- */
+.pkg-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;margin-top:8vh;background:var(--line-dark)}
+.pkg{
+  background:var(--ink);padding:52px 44px;position:relative;overflow:hidden;
+  transition:transform .5s cubic-bezier(.2,.9,.2,1),background .4s;
+}
+.pkg:hover{background:var(--ink-2);transform:translateY(-6px)}
+.pkg-idx{font-size:11px;letter-spacing:.3em;color:var(--grey);font-weight:700;text-transform:uppercase}
+.pkg h3{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(1.8rem,3.4vw,2.8rem);margin:14px 0 30px;letter-spacing:.02em}
+.pkg h3 span{color:var(--red)}
+.pkg-prices{display:flex;gap:2px;margin-bottom:28px;background:var(--line-dark)}
+.pkg-prices>div{flex:1;background:var(--ink-2);padding:18px 20px}
+.pkg-prices span{display:block;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--grey);font-weight:700;margin-bottom:8px}
+.pkg-prices strong{font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(1.05rem,1.7vw,1.4rem);letter-spacing:.02em}
+.pkg-prices .retail-cell strong{color:var(--red)}
+.pkg p{opacity:.72;font-size:14.5px;max-width:52ch}
+.pkg .corner{position:absolute;top:0;right:0;width:0;height:0;border-style:solid;border-width:0 46px 46px 0;border-color:transparent var(--red) transparent transparent;opacity:0;transition:opacity .4s}
+.pkg:hover .corner{opacity:1}
+
+/* ---------- models ---------- */
+.models{display:grid;grid-template-columns:repeat(3,1fr);margin-top:8vh;border-top:2px solid var(--ink)}
+.model{padding:48px 36px 56px;border-right:1px solid var(--line-light);position:relative;transition:background .4s}
+.model:last-child{border-right:none}
+.model:hover{background:rgba(230,50,41,.05)}
+.model .mnum{font-family:'Anton',sans-serif;font-size:clamp(2.6rem,4.6vw,4rem);color:var(--red);line-height:1;display:block;margin-bottom:22px}
+.model h3{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(1.3rem,2.2vw,1.8rem);letter-spacing:.04em;margin-bottom:16px}
+.model p{font-size:14.5px;color:#4a463c;line-height:1.65}
+
+/* ---------- cta ---------- */
+.cta{background:var(--ink);position:relative;padding:20vh 4vw 12vh;text-align:left;overflow:hidden}
+.cta::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(ellipse 60% 50% at 70% 40%,rgba(230,50,41,.16),transparent 65%);
+}
+.cta .wrap{position:relative;z-index:2}
+.cta-kicker{font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--grey);font-weight:700;margin-bottom:5vh;display:flex;align-items:center;gap:14px}
+.cta-kicker::before{content:"";width:44px;height:1px;background:var(--red)}
+.cta h2{
+  font-family:'Anton',sans-serif;text-transform:uppercase;line-height:1;
+  font-size:clamp(2.6rem,7.5vw,7rem);letter-spacing:.01em;max-width:1200px;
+}
+.cta h2 .mask{display:block;overflow:hidden;padding-bottom:.05em}
+.cta h2 .line{display:block}
+.cta h2 .red{color:var(--red)}
+.cta h2 .outline{color:transparent;-webkit-text-stroke:2px var(--paper)}
+.cta-sub{margin-top:5vh;max-width:560px;font-size:clamp(1rem,1.5vw,1.25rem);color:rgba(242,238,229,.7)}
+.cta-sub .serif{font-family:'Fraunces',serif;font-style:italic;color:var(--paper)}
+.negotiable{
+  margin-top:8vh;display:inline-flex;flex-direction:column;gap:14px;
+  border:1px solid rgba(230,50,41,.5);padding:34px 40px;max-width:680px;
+  background:rgba(230,50,41,.06);position:relative;
+}
+.negotiable .neg-title{
+  font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(1.3rem,2.4vw,1.9rem);
+  color:var(--red);letter-spacing:.04em;display:flex;align-items:center;gap:16px;
+}
+.negotiable .neg-title svg{width:22px;height:22px;fill:var(--red);flex:none}
+.negotiable p{font-size:15px;color:rgba(242,238,229,.8);line-height:1.7}
+
+/* contact actions */
+.cta-actions{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin-top:6vh}
+.wa-btn{
+  display:inline-flex;align-items:center;gap:12px;background:var(--red);color:var(--paper);text-decoration:none;
+  font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;padding:18px 32px;border-radius:999px;
+  box-shadow:0 12px 40px rgba(230,50,41,.35);transition:transform .35s cubic-bezier(.2,.9,.3,1.4),background .3s;
+}
+.wa-btn:hover{transform:translateY(-4px) scale(1.03);background:var(--red-deep)}
+.wa-btn svg{width:20px;height:20px;fill:currentColor;flex:none}
+.site-link{
+  display:inline-flex;align-items:center;gap:10px;color:var(--paper);text-decoration:none;
+  font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:18px 28px;
+  border:1px solid var(--line-dark);border-radius:999px;transition:border-color .3s,color .3s,transform .35s cubic-bezier(.2,.9,.3,1.4);
+}
+.site-link:hover{border-color:var(--red);color:var(--red);transform:translateY(-4px)}
+.site-link svg{width:15px;height:15px;fill:currentColor;flex:none}
+.wa-print{display:none}
+.footer a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(230,50,41,.5);transition:color .3s}
+.footer a:hover{color:var(--red)}
+@media print{
+  .cta-actions{display:none!important}
+  .wa-print{display:block;margin-top:24px;font-size:12pt;color:#111}
+  .wa-print strong{color:var(--red)}
+  .footer a{color:#111;border-bottom-color:#999}
+}
+.footer{
+  margin-top:14vh;padding-top:36px;border-top:1px solid var(--line-dark);
+  display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;
+  font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--grey);font-weight:600;
+}
+.footer .f-brand{display:flex;align-items:center;gap:12px}
+.footer img{width:30px;height:30px;object-fit:contain}
+
+/* reveal defaults (JS enhances) */
+[data-reveal]{opacity:0;transform:translateY(44px)}
+.no-js [data-reveal],.reduced [data-reveal]{opacity:1;transform:none}
+
+/* ---------- responsive ---------- */
+@media(max-width:1024px){
+  .hero-side{position:relative;right:auto;top:auto;transform:none;margin:8vh auto 0;width:min(58vw,340px)}
+  .hero{padding-top:18vh}
+  .pillars,.models{grid-template-columns:1fr}
+  .model{border-right:none;border-bottom:1px solid var(--line-light)}
+  .model:last-child{border-bottom:none}
+  .pkg-grid{grid-template-columns:1fr}
+  .grid2{grid-template-columns:1fr}
+  .rate-table thead th:nth-child(2),.rate-table tbody td:nth-child(2){width:120px}
+  .rate-table thead th:nth-child(3),.rate-table tbody td:nth-child(3){width:150px}
+}
+@media(max-width:640px){
+  .rate-table,.rate-table tbody,.rate-table tr,.rate-table td{display:block;width:100%}
+  .rate-table thead{display:none}
+  .rate-table tbody td{border:none;padding:6px 0}
+  .rate-table tbody tr{display:block;padding:22px 0;border-bottom:1px solid var(--line-light)}
+  .price small{margin-bottom:2px}
+  .print-fab{bottom:18px;right:18px;padding:14px 20px;font-size:11px}
+  .topbar .right{display:none}
+}
+
+/* ---------- print ---------- */
+@page{margin:13mm}
+@media print{
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{background:#fff!important;color:#111!important;font-size:12px}
+  .grain,.progress,.topbar,.print-fab,.scroll-hint,.hero-watermark,.marquee-band,.orbit{display:none!important}
+  [data-reveal],[data-reveal-group]>*,.hero-title .line,.cta h2 .line{opacity:1!important;transform:none!important}
+  .hero-sub em{color:#111!important}
+  .hero{min-height:auto;padding:0 0 30px;color:#111}
+  .hero-title{font-size:44pt;color:#111}
+  .hero-title .line.outline{color:#111;-webkit-text-stroke:0}
+  .hero-sub{color:#333}
+  .hero-tag{border-color:#999;color:#111}
+  .hero-side{position:relative;transform:none;right:auto;top:auto;margin:20px 0;width:130px}
+  .logo-frame::before,.logo-frame::after{display:none}
+  .logo-caption{position:static;transform:none;color:#555;margin-top:6px}
+  .chapter{padding:34px 0;color:#111!important;background:#fff!important}
+  .chapter .ghost{display:none}
+  .chapter-title{color:#111;font-size:26pt}
+  .lead{color:#222!important;font-size:13pt}
+  .on-ink .card,.on-paper .card{background:#fff!important;color:#111;border:1px solid #ddd}
+  .card p{color:#333;opacity:1}
+  .highlight{background:#f6f4ee!important;color:#111;border-left-color:var(--red)}
+  .pillars,.pkg-grid,.grid2{background:#ddd}
+  .pillar,.pkg{background:#fff!important;color:#111;border:1px solid #ddd;page-break-inside:avoid}
+  .pillar p,.pkg p{color:#333;opacity:1}
+  .pkg-prices>div{background:#f6f4ee}
+  .pkg-prices span{color:#666}
+  .pkg-prices strong{color:#111}
+  .pkg-prices .retail-cell strong{color:var(--red)}
+  .pricing-note{border-color:#ccc;color:#333;background:#fff}
+  .rate-table thead th{color:var(--red);border-bottom-color:#111}
+  .rate-table tbody td{border-bottom-color:#ddd;padding:12px 14px}
+  .rate-table td strong{color:#111;font-size:11pt}
+  .td-desc{color:#666}
+  .price{color:#111}
+  .price.retail{color:var(--red)}
+  .sources{color:#777}
+  .models{border-top-color:#111}
+  .model{border-color:#ddd}
+  .model h3{color:#111}
+  .model p{color:#444}
+  .cta{padding:40px 0;background:#fff!important;color:#111}
+  .cta::before{display:none}
+  .cta h2{color:#111;font-size:30pt}
+  .cta h2 .outline{color:#111;-webkit-text-stroke:0}
+  .cta-sub{color:#333}
+  .negotiable{border-color:var(--red);background:#fdf3f2}
+  .negotiable p{color:#333}
+  .footer{border-top-color:#ccc;color:#777}
+  .pkg,.pillar,.card,.model,.negotiable{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="topbar no-print">
+  <div class="brand"><span class="dotmark"></span><span>Yafelin Espino Agencia × Jake Mate</span></div>
+  <div class="right">Propuesta de alianza · 2026</div>
+</header>
+
+<button class="print-fab no-print" data-testid="print-pdf-button" onclick="window.print()" aria-label="Guardar propuesta como PDF">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h12v4h2a2 2 0 0 1 2 2v7h-4v5H6v-5H2V8a2 2 0 0 1 2-2h2V2zm2 2v2h8V4H8zm-2 9v5h12v-5H6zm12-4.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z"/></svg>
+  Guardar en PDF
+</button>
+
+<!-- ============ HERO ============ -->
+<section class="hero" data-testid="hero-section">
+  <div class="hero-watermark" aria-hidden="true">JAQUE&nbsp;MATE</div>
+
+  <p class="kicker" data-testid="hero-kicker">Alianza estratégica · 2026</p>
+
+  <h1 class="hero-title" data-testid="hero-title">
+    <span class="mask"><span class="line">Tu agencia.</span></span>
+    <span class="mask"><span class="line outline">Nuestra</span></span>
+    <span class="mask"><span class="line">tecnología<i class="rdot">.</i></span></span>
+  </h1>
+
+  <p class="hero-sub" data-testid="hero-sub">
+    Yafelin Espino Agencia amplía su portafolio digital con un aliado especializado en
+    <em>Web, SEO, automatización e Inteligencia Artificial</em>.
+  </p>
+
+  <div class="hero-tag" data-testid="hero-tag">Tu estrategia <b>·</b> Tu cliente <b>·</b> Nuestra ejecución tecnológica</div>
+
+  <div class="hero-side" data-testid="hero-logo">
+    <svg class="orbit" viewBox="0 0 200 200" aria-hidden="true">
+      <defs><path id="circlePath" d="M100,100 m-84,0 a84,84 0 1,1 168,0 a84,84 0 1,1 -168,0"/></defs>
+      <text><textPath href="#circlePath">Alianza estratégica 2026 · Yafelin × Jake Mate · Alianza estratégica 2026 ·</textPath></text>
+    </svg>
+    <div class="logo-frame" id="logoFrame">
+      <img src="jakemate-logo.png" alt="Jake Mate — Socio tecnológico">
+    </div>
+    <div class="logo-caption">Jake Mate · Socio tecnológico</div>
+  </div>
+
+  <div class="scroll-hint" aria-hidden="true"><span class="bar"></span><span>Desliza</span></div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee-band no-print-fold" aria-hidden="true">
+  <div class="checker"></div>
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>Tu estrategia</span><span class="sep">—</span><span>Tu cliente</span><span class="sep">—</span><span>Nuestra tecnología</span><span class="sep">—</span><span>Alianza 2026</span><span class="sep">—</span>
+      <span>Tu estrategia</span><span class="sep">—</span><span>Tu cliente</span><span class="sep">—</span><span>Nuestra tecnología</span><span class="sep">—</span><span>Alianza 2026</span><span class="sep">—</span>
+    </div>
+  </div>
+  <div class="checker"></div>
+</div>
+
+<!-- ============ 01 LA OPORTUNIDAD ============ -->
+<section class="chapter on-paper" data-testid="chapter-oportunidad">
+  <div class="ghost" aria-hidden="true">01</div>
+  <div class="wrap">
+    <header class="chapter-head" data-reveal>
+      <span class="chapter-num">01</span>
+      <h2 class="chapter-title">La oportunidad</h2>
+    </header>
+    <p class="lead" data-reveal>
+      La alianza está diseñada para que Yafelin pueda vender <strong>soluciones digitales de mayor valor</strong> sin tener que construir un equipo tecnológico interno. Jake Mate funciona como <span class="serif">socio de delivery</span>: desarrolla, implementa y acompaña la operación detrás de escena.
+    </p>
+    <div class="grid2">
+      <article class="card" data-reveal data-testid="card-para-yafelin">
+        <span class="idx">Para Yafelin</span>
+        <h3>Nuevas líneas de ingreso</h3>
+        <p>Más servicios para ofrecer a sus clientes, nuevas líneas de ingresos y capacidad de ejecutar proyectos digitales sin ampliar estructura fija.</p>
+      </article>
+      <article class="card" data-reveal data-testid="card-cliente-final">
+        <span class="idx">Para el cliente final</span>
+        <h3>Una propuesta integral</h3>
+        <p>Una propuesta integral que conecta presencia digital, generación de demanda, conversión, automatización e IA.</p>
+      </article>
+    </div>
+    <div class="highlight" data-reveal data-testid="principio-comercial">
+      <strong>Principio comercial:</strong> no se trata de vender <em>“desarrollo web barato”</em>. Se trata de que Yafelin pueda incorporar una nueva capacidad tecnológica a su oferta y conservar la relación con su cliente.
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 PORTAFOLIO ============ -->
+<section class="chapter on-ink" data-testid="chapter-portafolio">
+  <div class="ghost" aria-hidden="true">02</div>
+  <div class="wrap">
+    <header class="chapter-head" data-reveal>
+      <span class="chapter-num">02</span>
+      <h2 class="chapter-title">Un portafolio que se puede vender</h2>
+    </header>
+    <p class="lead" data-reveal>Tres líneas simples para presentar la tecnología como <strong>una solución de negocio</strong>.</p>
+    <div class="pillars">
+      <article class="pillar" data-reveal data-testid="pillar-build">
+        <span class="pnum">01</span>
+        <h3>Build</h3>
+        <p>Landing pages, sitios corporativos, e-commerce, reservas, cotizadores, calculadoras, configuradores y herramientas interactivas.</p>
+      </article>
+      <article class="pillar" data-reveal data-testid="pillar-grow">
+        <span class="pnum">02</span>
+        <h3>Grow</h3>
+        <p>SEO, Local SEO, GEO / AI Search, Google Business Profile, Google Ads, analítica y optimización de conversión.</p>
+      </article>
+      <article class="pillar" data-reveal data-testid="pillar-automate">
+        <span class="pnum">03</span>
+        <h3>Automate</h3>
+        <p>Chatbots de IA, asistentes de conocimiento, calificación de leads, generación de contenido y automatización de procesos.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 TARIFA ============ -->
+<section class="chapter on-paper" data-testid="chapter-tarifa">
+  <div class="ghost" aria-hidden="true">03</div>
+  <div class="wrap">
+    <header class="chapter-head" data-reveal>
+      <span class="chapter-num">03</span>
+      <h2 class="chapter-title">Tarifa de referencia para la alianza</h2>
+    </header>
+    <p class="lead" data-reveal>
+      Trabajaremos con dos referencias: <strong>tarifa Partner</strong> para Yafelin y <strong>precio sugerido US Retail</strong> para presentar al cliente final. Son rangos de referencia y cada proyecto se cotiza según alcance.
+    </p>
+    <div class="pricing-note" data-reveal data-testid="pricing-note">
+      <strong>Cómo leer esta tabla:</strong> Partner = costo de entrega de Jake Mate para la alianza. US Retail = rango sugerido de venta al cliente en Estados Unidos. El margen final de Yafelin se define comercialmente según el proyecto.
+    </div>
+    <table class="rate-table" data-testid="rate-table">
+      <thead>
+        <tr><th>Servicio</th><th>Tarifa Partner</th><th>Precio sugerido US Retail</th></tr>
+      </thead>
+      <tbody data-reveal-group>
+        <tr><td><strong>Landing Page</strong><span class="td-desc">Página de conversión, formularios, CTA, responsive y SEO base.</span></td><td class="price partner"><small>Partner</small>$600–900</td><td class="price retail"><small>US Retail</small>$1,200–2,000</td></tr>
+        <tr><td><strong>Sitio web básico</strong><span class="td-desc">Sitio de hasta 5 páginas para profesionales y pequeñas empresas.</span></td><td class="price partner"><small>Partner</small>$1,200–1,800</td><td class="price retail"><small>US Retail</small>$2,500–4,000</td></tr>
+        <tr><td><strong>Sitio web corporativo</strong><span class="td-desc">Mayor profundidad de contenido, arquitectura y conversión.</span></td><td class="price partner"><small>Partner</small>$2,000–3,000</td><td class="price retail"><small>US Retail</small>$4,000–6,500</td></tr>
+        <tr><td><strong>Rediseño web</strong><span class="td-desc">Modernización visual, UX, estructura y optimización.</span></td><td class="price partner"><small>Partner</small>$1,200–2,200</td><td class="price retail"><small>US Retail</small>$2,500–5,000</td></tr>
+        <tr><td><strong>E-commerce básico</strong><span class="td-desc">Catálogo, carrito, checkout e integraciones estándar.</span></td><td class="price partner"><small>Partner</small>$2,500–4,000</td><td class="price retail"><small>US Retail</small>$5,000–8,000</td></tr>
+        <tr><td><strong>Sistema de reservas</strong><span class="td-desc">Agenda, reservas, formularios y flujo de confirmación.</span></td><td class="price partner"><small>Partner</small>$900–1,800</td><td class="price retail"><small>US Retail</small>$2,000–3,500</td></tr>
+        <tr><td><strong>Cotizador / herramienta interactiva</strong><span class="td-desc">Calculadoras, cotizadores, configuradores y herramientas comerciales.</span></td><td class="price partner"><small>Partner</small>$1,200–2,500</td><td class="price retail"><small>US Retail</small>$2,500–5,000</td></tr>
+        <tr><td><strong>SEO inicial</strong><span class="td-desc">Auditoría, estructura, indexación, metadatos y fundamentos técnicos.</span></td><td class="price partner"><small>Partner</small>$400–800</td><td class="price retail"><small>US Retail</small>$800–1,500</td></tr>
+        <tr><td><strong>SEO mensual</strong><span class="td-desc">Optimización continua, contenidos, seguimiento y reportes.</span></td><td class="price partner"><small>Partner</small>$500–900/mes</td><td class="price retail"><small>US Retail</small>$1,000–2,000/mes</td></tr>
+        <tr><td><strong>GEO / AI Search</strong><span class="td-desc">Optimización de presencia en buscadores y ecosistemas de IA.</span></td><td class="price partner"><small>Partner</small>$500–1,000/mes</td><td class="price retail"><small>US Retail</small>$1,000–2,000/mes</td></tr>
+        <tr><td><strong>Google Ads — gestión</strong><span class="td-desc">Configuración, optimización y seguimiento. Inversión publicitaria aparte.</span></td><td class="price partner"><small>Partner</small>$400–700/mes</td><td class="price retail"><small>US Retail</small>$750–1,500/mes</td></tr>
+        <tr><td><strong>AI Chatbot</strong><span class="td-desc">Asistente web para preguntas frecuentes, captura y calificación de leads.</span></td><td class="price partner"><small>Partner</small>$750–1,500</td><td class="price retail"><small>US Retail</small>$1,500–3,000</td></tr>
+        <tr><td><strong>AI Assistant / Knowledge Base</strong><span class="td-desc">Asistente entrenado con información y procesos del negocio.</span></td><td class="price partner"><small>Partner</small>$1,200–2,500</td><td class="price retail"><small>US Retail</small>$2,500–5,000</td></tr>
+        <tr><td><strong>AI Automation</strong><span class="td-desc">Automatizaciones de procesos, leads, contenidos y operaciones.</span></td><td class="price partner"><small>Partner</small>$1,000–3,000</td><td class="price retail"><small>US Retail</small>$2,500–6,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ 04 PAQUETES ============ -->
+<section class="chapter on-ink" data-testid="chapter-paquetes">
+  <div class="ghost" aria-hidden="true">04</div>
+  <div class="wrap">
+    <header class="chapter-head" data-reveal>
+      <span class="chapter-num">04</span>
+      <h2 class="chapter-title">Empaquetados para vender soluciones</h2>
+    </header>
+    <p class="lead" data-reveal>Los paquetes simplifican la conversación comercial y permiten que Yafelin venda <strong>una solución completa</strong>, no una lista de servicios técnicos.</p>
+    <div class="pkg-grid">
+      <article class="pkg" data-reveal data-testid="pkg-starter">
+        <span class="corner" aria-hidden="true"></span>
+        <span class="pkg-idx">Paquete · 01</span>
+        <h3>Digital <span>Starter</span></h3>
+        <div class="pkg-prices">
+          <div><span>Partner</span><strong>$1,500–2,000</strong></div>
+          <div class="retail-cell"><span>US Retail</span><strong>$3,000–4,000</strong></div>
+        </div>
+        <p>Landing o sitio básico + SEO inicial + Google Business Profile + Analytics + formulario de leads.</p>
+      </article>
+      <article class="pkg" data-reveal data-testid="pkg-growth">
+        <span class="corner" aria-hidden="true"></span>
+        <span class="pkg-idx">Paquete · 02</span>
+        <h3>Digital <span>Growth</span></h3>
+        <div class="pkg-prices">
+          <div><span>Partner</span><strong>$2,500–4,000</strong></div>
+          <div class="retail-cell"><span>US Retail</span><strong>$5,000–7,500</strong></div>
+        </div>
+        <p>Sitio web + SEO inicial + Google Business Profile + optimización de conversión + analítica + generación de leads.</p>
+      </article>
+      <article class="pkg" data-reveal data-testid="pkg-sales">
+        <span class="corner" aria-hidden="true"></span>
+        <span class="pkg-idx">Paquete · 03</span>
+        <h3>Digital <span>Sales</span></h3>
+        <div class="pkg-prices">
+          <div><span>Partner</span><strong>$4,000–6,500</strong></div>
+          <div class="retail-cell"><span>US Retail</span><strong>$8,000–12,000</strong></div>
+        </div>
+        <p>Sitio + e-commerce o reservas + SEO + configuración de Google Ads + tracking de conversiones + automatización de leads.</p>
+      </article>
+      <article class="pkg" data-reveal data-testid="pkg-ai">
+        <span class="corner" aria-hidden="true"></span>
+        <span class="pkg-idx">Paquete · 04</span>
+        <h3>AI <span>Business</span></h3>
+        <div class="pkg-prices">
+          <div><span>Partner</span><strong>$2,500–5,000+</strong></div>
+          <div class="retail-cell"><span>US Retail</span><strong>$5,000–10,000+</strong></div>
+        </div>
+        <p>Integración web + chatbot IA + base de conocimiento + calificación de leads + automatización.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 MODELOS ============ -->
+<section class="chapter on-paper" data-testid="chapter-modelos">
+  <div class="ghost" aria-hidden="true">05</div>
+  <div class="wrap">
+    <header class="chapter-head" data-reveal>
+      <span class="chapter-num">05</span>
+      <h2 class="chapter-title">Modelos de alianza</h2>
+    </header>
+    <div class="models" data-reveal-group>
+      <article class="model" data-reveal data-testid="model-white-label">
+        <span class="mnum">01</span>
+        <h3>White Label</h3>
+        <p>Yafelin mantiene la marca, la relación y la dirección comercial. Jake Mate ejecuta la tecnología detrás de escena.</p>
+      </article>
+      <article class="model" data-reveal data-testid="model-co-branded">
+        <span class="mnum">02</span>
+        <h3>Co-Branded</h3>
+        <p>Las dos marcas aparecen en proyectos seleccionados cuando la experiencia del cliente se beneficia de una propuesta conjunta.</p>
+      </article>
+      <article class="model" data-reveal data-testid="model-referral">
+        <span class="mnum">03</span>
+        <h3>Referral</h3>
+        <p>Yafelin refiere el proyecto y Jake Mate ejecuta. La compensación se define por proyecto o por acuerdo comercial.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 CRECIMIENTO ============ -->
+<section class="chapter on-paper" style="padding-top:6vh" data-testid="chapter-crecimiento">
+  <div class="ghost" aria-hidden="true">06</div>
+  <div class="wrap">
+    <header class="chapter-head" data-reveal>
+      <span class="chapter-num">06</span>
+      <h2 class="chapter-title">Una relación que puede crecer</h2>
+    </header>
+    <div class="grid2">
+      <article class="card" data-reveal data-testid="card-proyecto-inicial">
+        <span class="idx">Proyecto inicial</span>
+        <h3>Del alcance al lanzamiento</h3>
+        <p>Definición del alcance → propuesta comercial → diseño → desarrollo → lanzamiento → entrega.</p>
+      </article>
+      <article class="card" data-reveal data-testid="card-ingresos-recurrentes">
+        <span class="idx">Ingresos recurrentes</span>
+        <h3>Evolución continua</h3>
+        <p>SEO, GEO, Google Ads, mantenimiento, analítica, automatizaciones y evolución continua del ecosistema digital.</p>
+      </article>
+    </div>
+    <div class="highlight" data-reveal data-testid="recomendacion-comercial">
+      <strong>Recomendación comercial:</strong> utilizar estos rangos como <em>Partner Rate Card 2026</em> y presentar al cliente final el valor Retail correspondiente al alcance. No es necesario publicar toda la tarifa interna de la alianza.
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta" data-testid="cta-section">
+  <div class="wrap">
+    <p class="cta-kicker" data-reveal>El próximo movimiento</p>
+    <h2 data-testid="cta-title">
+      <span class="mask"><span class="line">Yafelin abre</span></span>
+      <span class="mask"><span class="line">la puerta<i class="rdot" style="color:var(--red);font-style:normal">.</i></span></span>
+      <span class="mask"><span class="line outline">Jake Mate hace posible</span></span>
+      <span class="mask"><span class="line red">la tecnología.</span></span>
+    </h2>
+    <p class="cta-sub" data-reveal>
+      Una alianza para convertir estrategia en <span class="serif">soluciones digitales</span> que se pueden vender, implementar y escalar.
+    </p>
+
+    <div class="cta-actions" data-reveal>
+      <a class="wa-btn" data-testid="whatsapp-cta-button" href="https://wa.me/573167696510?text=Hola%2C%20quiero%20conversar%20sobre%20la%20alianza%20Yafelin%20%C3%97%20Jake%20Mate" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        Hablemos por WhatsApp
+      </a>
+      <a class="site-link" data-testid="website-link" href="https://www.jakemate.click" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm7.93 9h-3.02a15.7 15.7 0 0 0-1.2-5.02A8.02 8.02 0 0 1 19.93 11zM12 4.06c.9 1.16 1.6 2.86 1.9 4.94h-3.8c.3-2.08 1-3.78 1.9-4.94zM8.29 5.98A15.7 15.7 0 0 0 7.09 11H4.07a8.02 8.02 0 0 1 4.22-5.02zM4.07 13h3.02c.16 2.11.6 3.85 1.2 5.02A8.02 8.02 0 0 1 4.07 13zM12 19.94c-.9-1.16-1.6-2.86-1.9-4.94h3.8c-.3 2.08-1 3.78-1.9 4.94zm1.8-6.94a15.7 15.7 0 0 0 1.2 5.02A8.02 8.02 0 0 1 19.93 13h-3.02z"/></svg>
+        www.jakemate.click
+      </a>
+    </div>
+    <p class="wa-print">Contacto: <strong>WhatsApp +57 316 769 6510</strong> · www.jakemate.click</p>
+
+    <div class="negotiable" data-reveal data-testid="nota-negociable">
+      <span class="neg-title">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 1 21h22L12 2zm0 4.2L19.5 19h-15L12 6.2zM11 10v5h2v-5h-2zm0 6v2h2v-2h-2z"/></svg>
+        Todo es negociable
+      </span>
+      <p>Esta propuesta es un punto de partida. Alcances, tarifas, paquetes y modelos de colaboración se conversan abiertamente y se ajustan a cada proyecto, a cada cliente y a cada oportunidad.</p>
+    </div>
+
+    <footer class="footer">
+      <div class="f-brand">
+        <img src="jakemate-logo.png" alt="Jake Mate">
+        <span>Yafelin Espino Agencia × Jake Mate</span>
+      </div>
+      <a href="https://www.jakemate.click" target="_blank" rel="noopener" data-testid="footer-website-link">www.jakemate.click</a>
+      <span>Documento de referencia comercial · 2026</span>
+    </footer>
+  </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+<script>
+(function(){
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduced || !window.gsap) { document.body.classList.add('reduced'); return; }
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  /* Lenis smooth momentum scrolling */
+  var lenis = null;
+  if (window.Lenis) {
+    lenis = new Lenis({ lerp: 0.09, wheelMultiplier: 1 });
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(function(t){ lenis.raf(t * 1000); });
+    gsap.ticker.lagSmoothing(0);
+  }
+
+  /* progress bar */
+  gsap.to('.progress', {
+    scaleX: 1, ease: 'none',
+    scrollTrigger: { trigger: document.body, start: 'top top', end: 'bottom bottom', scrub: 0.4 }
+  });
+
+  /* hero on-load: masked line-by-line reveal */
+  var intro = gsap.timeline({ defaults: { ease: 'power4.out' } });
+  intro
+    .from('.kicker', { y: 24, opacity: 0, duration: 0.9 }, 0.15)
+    .from('.hero-title .line', { yPercent: 118, duration: 1.25, stagger: 0.14 }, 0.25)
+    .from('.hero-sub', { y: 30, opacity: 0, duration: 1 }, 0.95)
+    .from('.hero-tag', { y: 24, opacity: 0, duration: 0.9 }, 1.1)
+    .from('.hero-side', { scale: 0.82, opacity: 0, rotation: -8, duration: 1.4, ease: 'expo.out' }, 0.55)
+    .from('.scroll-hint', { opacity: 0, duration: 0.8 }, 1.4);
+
+  /* hero parallax: watermark + logo drift */
+  gsap.to('.hero-watermark', {
+    yPercent: 24, ease: 'none',
+    scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true }
+  });
+  gsap.to('.hero-side', {
+    yPercent: -16, ease: 'none',
+    scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true }
+  });
+  gsap.to('.hero-title', {
+    yPercent: 10, opacity: 0.25, ease: 'none',
+    scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true }
+  });
+
+  /* subtle 3D tilt on logo (fine pointers only) */
+  if (window.matchMedia('(pointer: fine)').matches) {
+    var frame = document.getElementById('logoFrame');
+    var rx = gsap.quickTo(frame, 'rotationX', { duration: 0.7, ease: 'power3.out' });
+    var ry = gsap.quickTo(frame, 'rotationY', { duration: 0.7, ease: 'power3.out' });
+    window.addEventListener('mousemove', function(e){
+      var nx = (e.clientX / window.innerWidth - 0.5);
+      var ny = (e.clientY / window.innerHeight - 0.5);
+      ry(nx * 14); rx(-ny * 14);
+    });
+  }
+
+  /* scroll reveals */
+  gsap.utils.toArray('[data-reveal]').forEach(function(el){
+    gsap.to(el, {
+      y: 0, opacity: 1, duration: 1.1, ease: 'power3.out',
+      scrollTrigger: { trigger: el, start: 'top 88%', once: true }
+    });
+  });
+
+  /* staggered rows inside reveal groups */
+  gsap.utils.toArray('[data-reveal-group]').forEach(function(group){
+    gsap.from(group.children, {
+      y: 26, opacity: 0, duration: 0.7, ease: 'power2.out', stagger: 0.045,
+      scrollTrigger: { trigger: group, start: 'top 85%', once: true }
+    });
+  });
+
+  /* ghost chapter numbers drift */
+  gsap.utils.toArray('.chapter .ghost').forEach(function(g){
+    gsap.fromTo(g, { yPercent: -12 }, {
+      yPercent: 12, ease: 'none',
+      scrollTrigger: { trigger: g.parentElement, start: 'top bottom', end: 'bottom top', scrub: true }
+    });
+  });
+
+  /* CTA masked lines */
+  gsap.from('.cta h2 .line', {
+    yPercent: 118, duration: 1.1, ease: 'power4.out', stagger: 0.12,
+    scrollTrigger: { trigger: '.cta h2', start: 'top 82%', once: true }
+  });
+
+  /* make everything visible before printing */
+  window.addEventListener('beforeprint', function(){
+    gsap.set('[data-reveal], .hero-title .line, .cta h2 .line, [data-reveal-group] > *', { clearProps: 'all', opacity: 1, y: 0, yPercent: 0 });
+  });
+})();
+</script>
+</body>
+</html>
