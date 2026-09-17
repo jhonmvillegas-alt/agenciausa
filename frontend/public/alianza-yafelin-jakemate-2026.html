@@ -381,16 +381,16 @@ a{color:inherit}
   [data-reveal],[data-reveal-group]>*,.hero-title .line,.cta h2 .line{opacity:1!important;transform:none!important}
   .hero-sub em{color:#111!important}
   .hero{min-height:auto;padding:0 0 30px;color:#111}
-  .hero-title{font-size:44pt;color:#111}
+  .hero-title{font-size:32pt;color:#111;margin-bottom:12px}
   .hero-title .line.outline{color:#111;-webkit-text-stroke:0}
   .hero-sub{color:#333}
   .hero-tag{border-color:#999;color:#111}
   .hero-side{position:relative;transform:none;right:auto;top:auto;margin:20px 0;width:130px}
   .logo-frame::before,.logo-frame::after{display:none}
   .logo-caption{position:static;transform:none;color:#555;margin-top:6px}
-  .chapter{padding:34px 0;color:#111!important;background:#fff!important}
+  .chapter{padding:20px 0;color:#111!important;background:#fff!important}
   .chapter .ghost{display:none}
-  .chapter-title{color:#111;font-size:26pt}
+  .chapter-title{color:#111;font-size:21pt}
   .lead{color:#222!important;font-size:13pt}
   .on-ink .card,.on-paper .card{background:#fff!important;color:#111;border:1px solid #ddd}
   .card p{color:#333;opacity:1}
@@ -414,15 +414,35 @@ a{color:inherit}
   .model{border-color:#ddd}
   .model h3{color:#111}
   .model p{color:#444}
-  .cta{padding:40px 0;background:#fff!important;color:#111}
+  .cta{padding:24px 0;background:#fff!important;color:#111}
   .cta::before{display:none}
-  .cta h2{color:#111;font-size:30pt}
+  .cta h2{color:#111;font-size:23pt}
   .cta h2 .outline{color:#111;-webkit-text-stroke:0}
   .cta-sub{color:#333}
   .negotiable{border-color:var(--red);background:#fdf3f2}
   .negotiable p{color:#333}
   .footer{border-top-color:#ccc;color:#777}
   .pkg,.pillar,.card,.model,.negotiable{break-inside:avoid}
+  /* compactar PDF: neutralizar espaciados en vh y controlar saltos */
+  .chapter-head{margin-bottom:14px;break-after:avoid}
+  .hero-sub,.hero-tag{margin-top:10px}
+  .grid2,.pillars,.pkg-grid,.models,.rate-table,.highlight,.sources{margin-top:16px!important}
+  .negotiable{margin-top:18px!important}
+  .cta-kicker{margin-bottom:12px!important}
+  .cta-sub{margin-top:12px!important}
+  .footer{margin-top:24px!important}
+  [style*="padding-top"]{padding-top:0!important}
+  .rate-table tr{break-inside:avoid}
+  /* forzar grillas multi-columna en PDF (el ancho A4 dispara el breakpoint movil) */
+  .pillars{grid-template-columns:repeat(3,1fr)!important}
+  .pkg-grid{grid-template-columns:repeat(2,1fr)!important}
+  .models{grid-template-columns:repeat(3,1fr)!important}
+  .grid2{grid-template-columns:1fr 1fr!important}
+  .pillar,.pkg,.model{padding:20px 22px}
+  /* mantener unido el titulo del cierre */
+  .cta-kicker{break-after:avoid}
+  .cta h2{break-inside:avoid}
+  .cta .wrap{break-before:auto}
 }
 </style>
 </head>
