@@ -1,0 +1,4 @@
+# Publica solo la carpeta estatica deploy/, sin build (HTML standalone)
+[build]
+  publish = "deploy"
+  command = ""
