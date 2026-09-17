@@ -377,6 +377,7 @@ a{color:inherit}
 @media print{
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   body{background:#fff!important;color:#111!important;font-size:12px}
+  html,body{height:auto!important;min-height:0!important;overflow:visible!important;transform:none!important}
   .grain,.progress,.topbar,.print-fab,.scroll-hint,.marquee-band{display:none!important}
   [data-reveal],[data-reveal-group]>*,.hero-title .line,.cta h2 .line{opacity:1!important;transform:none!important}
   .hero-sub em{color:#111!important}
@@ -860,10 +861,19 @@ a{color:inherit}
     scrollTrigger: { trigger: '.cta h2', start: 'top 82%', once: true }
   });
 
-  /* make everything visible before printing */
-  window.addEventListener('beforeprint', function(){
-    gsap.set('[data-reveal], .hero-title .line, .cta h2 .line, [data-reveal-group] > *', { clearProps: 'all', opacity: 1, y: 0, yPercent: 0 });
-  });
+  /* neutralizar animaciones y smooth-scroll antes de imprimir (PDF determinista) */
+  function prepararImpresion(){
+    try{ if(lenis && lenis.destroy){ lenis.destroy(); lenis = null; } }catch(e){}
+    try{ if(window.ScrollTrigger){ ScrollTrigger.getAll().forEach(function(t){ t.kill(false); }); } }catch(e){}
+    try{
+      if(window.gsap){
+        gsap.set('[data-reveal], [data-reveal-group] > *, .hero-title, .hero-title .line, .hero-sub, .hero-tag, .kicker, .hero-side, .hero-watermark, .scroll-hint, .chapter .ghost, .cta h2 .line, .progress', { clearProps:'all', opacity:1 });
+      }
+    }catch(e){}
+    try{ document.documentElement.classList.remove('lenis','lenis-smooth','lenis-scrolling','lenis-stopped'); }catch(e){}
+  }
+  window.addEventListener('beforeprint', prepararImpresion);
+  try{ window.matchMedia('print').addEventListener('change', function(e){ if(e.matches){ prepararImpresion(); } }); }catch(e){}
 })();
 </script>
 </body>
