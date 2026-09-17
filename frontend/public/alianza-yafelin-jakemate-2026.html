@@ -377,6 +377,7 @@ a{color:inherit}
 @media print{
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   body{background:#fff!important;color:#111!important;font-size:12px}
+  html,body{height:auto!important;min-height:0!important;overflow:visible!important;transform:none!important}
   .grain,.progress,.topbar,.print-fab,.scroll-hint,.marquee-band{display:none!important}
   [data-reveal],[data-reveal-group]>*,.hero-title .line,.cta h2 .line{opacity:1!important;transform:none!important}
   .hero-sub em{color:#111!important}
@@ -470,10 +471,10 @@ a{color:inherit}
   <div class="right">Propuesta de alianza · 2026</div>
 </header>
 
-<button class="print-fab no-print" data-testid="print-pdf-button" onclick="window.print()" aria-label="Guardar propuesta como PDF">
+<a class="print-fab no-print" data-testid="print-pdf-button" href="propuesta-yafelin-jakemate.pdf" download="Propuesta-Yafelin-JakeMate.pdf" aria-label="Descargar propuesta en PDF">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h12v4h2a2 2 0 0 1 2 2v7h-4v5H6v-5H2V8a2 2 0 0 1 2-2h2V2zm2 2v2h8V4H8zm-2 9v5h12v-5H6zm12-4.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z"/></svg>
   Guardar en PDF
-</button>
+</a>
 
 <!-- ============ HERO ============ -->
 <section class="hero" data-testid="hero-section">
@@ -860,10 +861,19 @@ a{color:inherit}
     scrollTrigger: { trigger: '.cta h2', start: 'top 82%', once: true }
   });
 
-  /* make everything visible before printing */
-  window.addEventListener('beforeprint', function(){
-    gsap.set('[data-reveal], .hero-title .line, .cta h2 .line, [data-reveal-group] > *', { clearProps: 'all', opacity: 1, y: 0, yPercent: 0 });
-  });
+  /* neutralizar animaciones y smooth-scroll antes de imprimir (PDF determinista) */
+  function prepararImpresion(){
+    try{ if(lenis && lenis.destroy){ lenis.destroy(); lenis = null; } }catch(e){}
+    try{ if(window.ScrollTrigger){ ScrollTrigger.getAll().forEach(function(t){ t.kill(false); }); } }catch(e){}
+    try{
+      if(window.gsap){
+        gsap.set('[data-reveal], [data-reveal-group] > *, .hero-title, .hero-title .line, .hero-sub, .hero-tag, .kicker, .hero-side, .hero-watermark, .scroll-hint, .chapter .ghost, .cta h2 .line, .progress', { clearProps:'all', opacity:1 });
+      }
+    }catch(e){}
+    try{ document.documentElement.classList.remove('lenis','lenis-smooth','lenis-scrolling','lenis-stopped'); }catch(e){}
+  }
+  window.addEventListener('beforeprint', prepararImpresion);
+  try{ window.matchMedia('print').addEventListener('change', function(e){ if(e.matches){ prepararImpresion(); } }); }catch(e){}
 })();
 </script>
 </body>
